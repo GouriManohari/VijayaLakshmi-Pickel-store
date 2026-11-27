@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from "axios"
+import apiClient from "../utils/api"
 import ProductCard from "../components/ProductCard"
 import { FiSearch } from "react-icons/fi"
 
@@ -30,7 +30,7 @@ function Products() {
   const [category, setCategory] = useState("all")
 
   useEffect(() => {
-    axios.get("/api/products")
+    apiClient.get("/products")
       .then(res => setProducts(res.data))
       .catch(() => setProducts(mockProducts))
       .finally(() => setLoading(false))

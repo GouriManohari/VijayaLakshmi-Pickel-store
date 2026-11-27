@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import axios from "axios"
+import apiClient from "../../utils/api"
 import { FiPackage, FiDollarSign, FiUsers, FiShoppingBag } from "react-icons/fi"
 
 function AdminDashboard() {
@@ -8,11 +8,11 @@ function AdminDashboard() {
   const [recentOrders, setRecentOrders] = useState([])
 
   useEffect(() => {
-    axios.get("/api/orders/admin/stats")
+    apiClient.get("/orders/admin/stats")
       .then(res => setStats(res.data))
       .catch(() => {})
 
-    axios.get("/api/orders/admin/recent")
+    apiClient.get("/orders/admin/recent")
       .then(res => setRecentOrders(res.data))
       .catch(() => {})
   }, [])
