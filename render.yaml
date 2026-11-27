@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: vijaya-lakshmi-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        scope: build
+        value: mongodb+srv://your_username:your_password@cluster.mongodb.net/vijayalakshmi?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        scope: build
+        value: vijaya-lakshmi-pickle-store-secret-key-2026
+      - key: NODE_ENV
+        scope: build
+        value: production
+      - key: PORT
+        scope: build
+        value: 5000
