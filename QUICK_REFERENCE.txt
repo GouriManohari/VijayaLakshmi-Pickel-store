@@ -1,0 +1,193 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                     VIJAYA LAKSHMI PICKLE STORE                           ║
+║                        QUICK REFERENCE CARD                               ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 🚀 START APPLICATION (2 Terminals)                                      │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ TERMINAL 1 - Backend:                                                   │
+│   cd C:\Users\gouri\Vijaya Lakhsmi Pickel Store\server                 │
+│   npm run dev                                                            │
+│   ✓ Wait for: "Server running on http://localhost:5000"                 │
+│                                                                          │
+│ TERMINAL 2 - Frontend:                                                  │
+│   cd C:\Users\gouri\Vijaya Lakhsmi Pickel Store                        │
+│   npm run dev                                                            │
+│   ✓ Wait for: "Local: http://localhost:5173/"                          │
+│                                                                          │
+│ BROWSER:                                                                 │
+│   Open: http://localhost:5173/                                           │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 👤 TEST ACCOUNTS                                                         │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ ADMIN:                                                                   │
+│   Email: admin@vijayalakshmi.com                                        │
+│   Pass: admin123                                                         │
+│   Access: Manage products, orders, users                                │
+│                                                                          │
+│ CUSTOMER:                                                                │
+│   Email: customer@example.com                                           │
+│   Pass: customer123                                                      │
+│   Access: Browse, cart, checkout                                        │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 🌐 IMPORTANT URLS                                                        │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ Frontend ................ http://localhost:5173/                        │
+│ Backend API ............. http://localhost:5000/api                     │
+│ Health Check ............ http://localhost:5000/api/health              │
+│                                                                          │
+│ Public Pages:                                                            │
+│   Home .................. http://localhost:5173/                        │
+│   Products .............. http://localhost:5173/products                │
+│   Register .............. http://localhost:5173/register                │
+│   Login ................. http://localhost:5173/login                   │
+│                                                                          │
+│ Protected Pages (Login Required):                                        │
+│   Cart .................. http://localhost:5173/cart                    │
+│   Dashboard ............. http://localhost:5173/dashboard               │
+│                                                                          │
+│ Admin Pages (Admin Login Required):                                      │
+│   Admin Dashboard ....... http://localhost:5173/admin                   │
+│   Manage Products ....... http://localhost:5173/admin/manage-products   │
+│   Manage Orders ......... http://localhost:5173/admin/manage-orders     │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 📁 IMPORTANT FILES & FOLDERS                                             │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ FRONTEND (React):                                                        │
+│   src/App.jsx ................. Main app & routes                       │
+│   src/pages/ .................. All pages                               │
+│   src/components/ ............. Reusable components                     │
+│   src/context/ ................ Auth & Cart state                       │
+│   vite.config.js .............. Build config & proxy                    │
+│                                                                          │
+│ BACKEND (Node.js/Express):                                               │
+│   server/server.js ............ Express app                             │
+│   server/routes/ .............. API endpoints                           │
+│   server/models/ .............. Database schemas                        │
+│   server/.env ................. Configuration & secrets                 │
+│   server/seed.js .............. Database seeding                        │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 📚 DOCUMENTATION FILES                                                   │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ GETTING_STARTED.md ........... Start here (5 min)                       │
+│ APP_OVERVIEW.md .............. What it does (5 min)                     │
+│ ARCHITECTURE.md .............. How it works (15 min)                    │
+│ QUICK_START.md ............... Checklists & commands (10 min)           │
+│ SETUP_GUIDE.md ............... Detailed setup (20 min)                  │
+│                                                                          │
+│ Read in this order: GETTING_STARTED → APP_OVERVIEW → ARCHITECTURE      │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ ⚙️ COMMON COMMANDS                                                        │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ FRONTEND (from root folder):                                             │
+│   npm run dev ............... Development server                        │
+│   npm run build ............. Production build                          │
+│   npm run lint .............. Code quality check                        │
+│                                                                          │
+│ BACKEND (from server folder):                                            │
+│   npm run dev ............... Dev with auto-reload                      │
+│   npm start ................. Production start                          │
+│   npm run seed .............. Seed database                             │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 🐛 QUICK TROUBLESHOOTING                                                 │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ ❌ "Cannot connect to MongoDB"                                           │
+│    ✓ Make sure mongod is running                                        │
+│    ✓ Check MONGODB_URI in server/.env                                   │
+│    ✓ Run: npm run seed (to test connection)                            │
+│                                                                          │
+│ ❌ "Port 5000 already in use"                                            │
+│    ✓ Change PORT in server/.env                                         │
+│    ✓ Or kill process: Get-Process | Where-Object {$_.Port -eq 5000}    │
+│                                                                          │
+│ ❌ "Port 5173 already in use"                                            │
+│    ✓ Vite will auto-use 5174                                            │
+│    ✓ Or change in vite.config.js                                        │
+│                                                                          │
+│ ❌ "Dependencies missing"                                                │
+│    ✓ Run: npm install (in both root and server folders)                │
+│                                                                          │
+│ ❌ "Blank page at localhost:5173"                                        │
+│    ✓ Check browser console (F12)                                        │
+│    ✓ Ensure backend is running                                          │
+│    ✓ Hard refresh (Ctrl+Shift+R)                                        │
+│                                                                          │
+│ For more help, see: SETUP_GUIDE.md "Troubleshooting" section            │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 🛠️ TECH STACK                                                             │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ FRONTEND:                          │  BACKEND:                          │
+│   • React 19                        │    • Node.js                       │
+│   • Vite (build)                    │    • Express 5                     │
+│   • Tailwind CSS                    │    • MongoDB                       │
+│   • React Router                    │    • Mongoose (ODM)                │
+│   • Axios (HTTP)                    │    • JWT (auth)                    │
+│   • React Hot Toast                 │    • bcryptjs (hash)               │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 🎯 WHAT YOU CAN DO                                                       │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ CUSTOMER:                          │  ADMIN:                            │
+│   ✓ Browse pickles                  │    ✓ Manage products              │
+│   ✓ View details                    │    ✓ Add/Edit/Delete products    │
+│   ✓ Add to cart                     │    ✓ View all orders              │
+│   ✓ Checkout                        │    ✓ Update order status          │
+│   ✓ View orders                     │    ✓ Manage users                 │
+│   ✓ User profile                    │    ✓ Analytics dashboard          │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ ✨ STATUS                                                                 │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│ ✅ Node.js v22.22.2 ............. INSTALLED                             │
+│ ✅ npm v10.9.7 .................. INSTALLED                             │
+│ ✅ Dependencies ................. INSTALLED                             │
+│ ✅ Backend .env ................. CONFIGURED                            │
+│ ✅ Database Models .............. DEFINED                               │
+│ ✅ Routes & API ................. READY                                 │
+│ ✅ Authentication ............... CONFIGURED                           │
+│ ✅ Frontend & Backend ........... READY                                │
+│                                                                          │
+│ STATUS: ✅ READY TO RUN                                                 │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║ 🚀 NEXT STEP: Open 2 terminals and run the servers (see above)            ║
+║    Then open http://localhost:5173/ in your browser                       ║
+╚════════════════════════════════════════════════════════════════════════════╝
