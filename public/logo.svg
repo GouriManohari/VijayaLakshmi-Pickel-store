@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Glass jar -->
+  <defs>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:0.5" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d0e8f0;stop-opacity:0.5" />
+    </linearGradient>
+    <linearGradient id="pickles" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700" />
+      <stop offset="100%" style="stop-color:#cc8800" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Jar lid (brass/gold) -->
+  <rect x="50" y="10" width="100" height="20" rx="2" fill="#d4af37" stroke="#8B7500" stroke-width="1"/>
+  <ellipse cx="100" cy="10" rx="50" ry="8" fill="#f0d770"/>
+  <ellipse cx="100" cy="30" rx="50" ry="10" fill="#c9a227" opacity="0.6"/>
+  
+  <!-- Jar neck -->
+  <line x1="60" y1="30" x2="55" y2="50" stroke="#c9a227" stroke-width="2"/>
+  <line x1="140" y1="30" x2="145" y2="50" stroke="#c9a227" stroke-width="2"/>
+  
+  <!-- Main jar body -->
+  <path d="M 55 50 Q 50 70 50 110 Q 50 140 70 150 L 130 150 Q 150 140 150 110 Q 150 70 145 50" fill="url(#glass)" stroke="#b0d4e3" stroke-width="2"/>
+  
+  <!-- Pickles inside (lemon slices) -->
+  <circle cx="85" cy="80" r="18" fill="url(#pickles)" stroke="#8B6914" stroke-width="1" opacity="0.9"/>
+  <circle cx="115" cy="90" r="16" fill="url(#pickles)" stroke="#8B6914" stroke-width="1" opacity="0.85"/>
+  <circle cx="80" cy="120" r="17" fill="url(#pickles)" stroke="#8B6914" stroke-width="1" opacity="0.8"/>
+  <circle cx="120" cy="115" r="15" fill="url(#pickles)" stroke="#8B6914" stroke-width="1" opacity="0.75"/>
+  
+  <!-- Spice seeds -->
+  <circle cx="90" cy="85" r="2" fill="#8B0000" opacity="0.7"/>
+  <circle cx="110" cy="95" r="2" fill="#8B0000" opacity="0.7"/>
+  <circle cx="75" cy="125" r="2" fill="#8B0000" opacity="0.7"/>
+  <circle cx="125" cy="120" r="2" fill="#8B0000" opacity="0.7"/>
+  <circle cx="100" cy="110" r="1.5" fill="#FF6347" opacity="0.6"/>
+  
+  <!-- Jar shine/reflection -->
+  <ellipse cx="70" cy="70" rx="12" ry="20" fill="white" opacity="0.3"/>
+  
+  <!-- Label -->
+  <rect x="60" y="135" width="80" height="8" fill="#f5e6d3" opacity="0.9" stroke="#8B7500" stroke-width="0.5"/>
+  <text x="100" y="140" text-anchor="middle" font-family="serif" font-size="4" fill="#2d4a37" font-weight="bold">PICKLES</text>
+</svg>
