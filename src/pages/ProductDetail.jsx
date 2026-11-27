@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import axios from "axios"
+import apiClient from "../utils/api"
 import { useCart } from "../context/CartContext"
 import toast from "react-hot-toast"
 import { FiShoppingCart, FiArrowLeft, FiMinus, FiPlus } from "react-icons/fi"
@@ -13,7 +13,7 @@ function ProductDetail() {
   const { addToCart } = useCart()
 
   useEffect(() => {
-    axios.get(`/api/products/${id}`)
+    apiClient.get(`/products/${id}`)
       .then(res => setProduct(res.data))
       .catch(() => setProduct(null))
       .finally(() => setLoading(false))

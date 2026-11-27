@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from "axios"
+import apiClient from "../../utils/api"
 import toast from "react-hot-toast"
 import { FiPlus, FiEdit2, FiTrash2, FiX } from "react-icons/fi"
 
@@ -16,7 +16,7 @@ function ManageProducts() {
   }, [])
 
   const fetchProducts = () => {
-    axios.get("/api/products")
+    apiClient.get("/products")
       .then(res => setProducts(res.data))
       .catch(() => toast.error("Failed to load products"))
   }
@@ -36,10 +36,10 @@ function ManageProducts() {
 
     try {
       if (editing) {
-        await axios.put(`/api/products/${editing}`, payload)
+        await apiClient.put(`/products/${editing}`, payload)
         toast.success("Product updated!")
       } else {
-        await axios.post("/api/products", payload)
+        await apiClient.post("/products", payload)
         toast.success("Product created!")
       }
       setShowForm(false)
@@ -63,7 +63,7 @@ function ManageProducts() {
   const handleDelete = async (id) => {
     if (!confirm("Are you sure you want to delete this product?")) return
     try {
-      await axios.delete(`/api/products/${id}`)
+      await apiClient.delete(`/products/${id}`)
       toast.success("Product deleted!")
       fetchProducts()
     } catch {

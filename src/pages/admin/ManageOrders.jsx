@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from "axios"
+import apiClient from "../../utils/api"
 import toast from "react-hot-toast"
 
 function ManageOrders() {
@@ -11,7 +11,7 @@ function ManageOrders() {
   }, [])
 
   const fetchOrders = () => {
-    axios.get("/api/orders/admin/all")
+    apiClient.get("/orders/admin/all")
       .then(res => setOrders(res.data))
       .catch(() => toast.error("Failed to load orders"))
       .finally(() => setLoading(false))
@@ -19,7 +19,7 @@ function ManageOrders() {
 
   const updateStatus = async (orderId, status) => {
     try {
-      await axios.put(`/api/orders/${orderId}/status`, { status })
+      await apiClient.put(`/orders/${orderId}/status`, { status })
       toast.success(`Order marked as ${status}`)
       fetchOrders()
     } catch {
